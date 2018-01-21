@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Caracteristicas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <script src="js/BD.js"></script>
+  <style>
+  a{
+    disabled: true
+  }
+  </style>
+  
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyA3O5CrlFoSTLrKW5NsS6JtL4gYgnPH7Aw",
+          authDomain: "solorol-3a25f.firebaseapp.com",
+          databaseURL: "https://solorol-3a25f.firebaseio.com",
+          projectId: "solorol-3a25f",
+          storageBucket: "solorol-3a25f.appspot.com",
+          messagingSenderId: "208645109167"
+        };
+        firebase.initializeApp(config);
+  </script>
+  
+  
+</head>
+<body >
+        <div class="container">
+                <h2>CARACTERISTICA DE TU PERSONAJE</h2> 
+                <p>Tu personaje es la estrella de la aventura que juegas,
+                    como heroe de un libro o una película. Como jugador, crea un personaje utilizando
+                    las reglas del manual, que puede  ser un salbaje barbaro de las llanuras heladas o
+                    un atuto picaro veloz e inteligente, puedes ser un mortifer arquero, o un ma que domina las artes
+                    arcanas.
+                    <hr>
+                    Practica mente todas las tiradas que realices serán modificadas según las características
+                     de tu personaje. un personaje resistente sobrevvivira con mayor facilidad al agujón venenoso 
+                     de un draco, un personaje perspicaz tendrá mas posibilidades de advertir la presencia 
+                     de unos osgos que se le acerquen por la espalda, y uno estúpido lo tendrá mas difícil para encontrar la puerta secreta que deja paso a una camara del tesoro. tus puntuaciones de características indican que modificadores han de aplicarse a la tirada que resuelva ese tipo de situaciones.
+                    Tu personaje tiene seis características: <b>Fuerza (Fue), Destreza (Des), Constitución (Con), Inteligencia (Int), Sabiduría (Sab), Carisma (Car). </b>
+                    todas las puntuaciones por encima de la media de tu personaje te proporcionaran 
+                    beneficios en ciertas tiradas de dados, y las que estén por debajo te perjudicaran 
+                    en otras. cuando creas tu personaje, determinan tus puntuaciones aleatoriamente,
+                     las asignas como deseas entre las características, y las aumenta o reduce según 
+                     la raza del personaje. mas tarde podrás ir mejorándolas a medida que te personaje
+                      gane experiencia.
+                </p>
+                
+                
+                  <div class="form-group row">                       
+                    <div class="col-xs-1">
+                      <label for="ex1">Dado 1</label>
+                      <p id="ex1"></p>
+                    </div>
+                    <div class="col-xs-1">
+                      <label for="ex2">Dado 2</label>
+                      <p id="ex2"></p>
+                    </div>
+                    <div class="col-xs-1">
+                      <label for="ex3">Dado 3</label>
+                      <p id="ex3"></p>
+                    </div>
+                    <div class="col-xs-1">
+                      <label for="ex4">Dado 4</label>
+                      <p id="ex4"></p>
+                    </div>
+                    <div class="col-xs-1">
+                      <label for="ex5">Min</label>
+                      <p id="ex5"></p>
+                    </div>
+                    <div class="col-xs-1">
+                      <label for="ex6">Total</label>
+                      <p id="ex6"></p>
+                    </div>
+                     <button id="Btn" onclick="lanzar()">Lanzar dados</button>
+                    <button id="Btn2" onclick="borrar()" disabled >Borrar</button>
+                    <input id="Btn3"type="button" value="Siguiente" onClick="window.location = 'index.html';" disabled >              
+                    <p id="demo"></p>  
+                  </div>  
+                  <hr color="blue" size=5>  
+                  <div >
+                       <div class="col">
+                          <label for="ex8">tirada 1</label>
+                          <p id="ex8"></p>
+                          </div>
+                          <div class="col">
+                              <label for="ex9">tirada 2</label>
+                          <p id="ex9"></p>
+                          </div>
+                          <div class="col">
+                              <label for="ex10">tirada 3</label>
+                          <p id="ex10"></p>
+                          </div>
+                          <div class="col">
+                               <label for="ex11">tirada 4</label>
+                          <p id="ex11"></p>
+                        </div>
+                           <div class="col">
+                                <label for="ex12">tirada 5</label>
+                          <p id="ex12"></p>
+                        </div>
+                          <div class="col">
+                               <label for="ex13">tirada 6</label>
+                           <p id="ex13"></p>
+                          
+                      </div>                 
+              </div>
+  
+</body>
+</html>
